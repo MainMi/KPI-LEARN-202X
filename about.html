@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <title>Lesson 1</title>
+</head>
+<body>
+    <div class="grid-container">
+        <header class="grid-item header">
+            <h2>Mykyta Havrylenko</h2>
+            <h2>Var 4, IP-24</h2>
+        </header>
+        <div class="grid-item textInfo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim atque voluptate fuga quasi esse assumenda dignissimos fugiat ullam eveniet debitis labore animi, explicabo nesciunt. Earum officia nulla quibusdam unde magnam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium repudiandae earum, illo, eaque rerum quidem aliquid deserunt sunt quisquam eveniet accusantium ab, consequatur beatae quis totam! Doloremque saepe quasi assumenda!</div>
+        <main class="content">
+            <h2>About me</h2>
+            <p>Highly motivated Full-Stack Developer with a strong foundation in 
+                algorithms, data structures, and code organization. Proficient in various 
+                technologies including Node.js, JavaScript, TypeScript, HTML, CSS, SASS, 
+                Express, MongoDB, MySQL, Angular, and React. Currently leading a 
+                startup project, enhancing skills in React and MERN stack, and honing 
+                leadership and communication abilities. Seeking to leverage my expertise 
+                to take on challenging web development projects.</p>
+        </main>
+        <div class="grid-item menuBox">
+            <nav class="navigation">
+                <a href="index.html">Home</a>
+                <a class="current">About me</a>
+                <a href="project.html">Project</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+        <div class="grid-item detailInfo">
+            <h2>Detail Information</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia assumenda harum hic dolore debitis fugit aliquam praesentium cumque? Omnis unde suscipit repellat amet enim ad voluptatibus iste dicta vero porro!</p>
+            <div class="closeBtn">Info</div>
+        </div>
+        <div class="grid-item footer">
+            <h3>Simple and Fast!</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt atque ea sapiente eligendi similique in quod nesciunt, quidem aspernatur consequatur commodi nemo expedita, distinctio illum. Consequatur earum maxime dignissimos quae.</p>
+        </div>
+    </div>
+    <script>
+        const closeBtn = document.querySelector('.closeBtn');
+        const detailInfo = document.querySelector('.detailInfo');
+        closeBtn.addEventListener('click', () => detailInfo.classList.toggle('active'));
+    </script>
+</body>
+</html>
