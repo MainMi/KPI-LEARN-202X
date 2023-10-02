@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index-flex.css">
+    <title>Lesson 1</title>
+</head>
+<body>
+    <div class="flex-container">
+        <header class="flex-item header">
+            <h2>Mykyta Havrylenko</h2>
+            <h2>Var 4, IP-24</h2>
+        </header>
+        <div class="flexBox">
+            <div class="flexMainBox">
+                <div class="flex-item textInfo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim atque voluptate fuga quasi esse assumenda dignissimos fugiat ullam eveniet debitis labore animi, explicabo nesciunt. Earum officia nulla quibusdam unde magnam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium repudiandae earum, illo, eaque rerum quidem aliquid deserunt sunt quisquam eveniet accusantium ab, consequatur beatae quis totam! Doloremque saepe quasi assumenda!
+                    <ul>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet reprehenderit cumque atque ut eos nostrum commodi odit neque ea magnam, officia dicta facere quaerat ipsam quas sapiente deserunt, voluptatem quisquam.</li>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, eveniet veritatis. Saepe, itaque voluptatum. Hic, voluptatem sapiente, pariatur corrupti dolorem ipsa magnam dolorum minima atque molestias perspiciatis voluptatum, nulla officiis?</li>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam ut voluptate, blanditiis architecto corporis sed provident soluta praesentium, sequi pariatur eius asperiores! Alias cum nostrum eos sapiente error odit sit.</li>
+                        <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse mollitia ad nesciunt? Unde eligendi obcaecati maxime doloribus dignissimos corporis provident ipsam ipsum laudantium mollitia illum maiores blanditiis enim, commodi possimus?</li>
+                    </ul>
+                </div>
+                <main class="content">
+                    <h2>It`s Home</h2>
+                    <p>You can move information is menu</p>
+                </main>
+                <div class="flex-item detailInfo">
+                    <h2>Detail Information</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia assumenda harum hic dolore debitis fugit aliquam praesentium cumque? Omnis unde suscipit repellat amet enim ad voluptatibus iste dicta vero porro!</p>
+                    <div class="closeBtn">Info</div>
+                </div>
+            </div>
+            <div class="flex-item menuBox">
+                <nav class="navigation">
+                    <a href="index.html">Home</a>
+                    <a class="current">Home(Flex)</a>
+                    <a href="indexNotFlexGrid.html">Home(NOT GRID AND FLEX)</a>
+                    <a href="about.html">About me</a>
+                    <a href="project.html">Project</a>
+                    <a href="gallery.html">Gallery</a>
+                    <a href="contact.html">Contact</a>
+                </nav>
+            </div>
+        </div>
+        <footer class="flex-item footer">
+            <h3>Simple and Fast!</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt atque ea sapiente eligendi similique in quod nesciunt, quidem aspernatur consequatur commodi nemo expedita, distinctio illum. Consequatur earum maxime dignissimos quae.</p>
+        </footer>
+    </div>
+    <script>
+        const closeBtn = document.querySelector('.closeBtn');
+        const detailInfo = document.querySelector('.detailInfo');
+        closeBtn.addEventListener('click', () => detailInfo.classList.toggle('active'));
+    </script>
+</body>
+</html>

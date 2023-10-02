@@ -32,51 +32,60 @@ body {
     box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.2);
 }
 
-.grid-container {
-    display: grid;
-    grid-template-columns: 25vw 50vw 25vw;
-    grid-template-rows: 25vh 30vh 20vh 25vh;
-    height: 100vh;
-}
-
-.grid-item {
+.item {
     box-sizing: border-box;
 }
 
 .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    display: block;
+    height: 25vh;
     background-color: rgba(255, 255, 255, 0.1);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
-    padding: 10px 20px;
-    grid-column: 1 / span 3;
-    grid-row: 1;
+    padding: 10.5vh 20px;
     z-index: 20;
 }
 
-.textInfo {
+.header h2 {
+    margin-top: 10vh;
+    display: math;
+    position: relative;
+    width: max-content;
+}
+
+.header h2:first-child {
+    margin-right: 65%;
+}
+
+.centerBox {
+    display: -webkit-box;
+    position: relative;
+    width: 100vw;
+    height: 50vh;
+}
+
+.centerBox .textInfo {
+    position: relative;
+    width: 25vw;
+    height: 30vh;
     padding: 20px;
     overflow: auto;
     grid-column: 1;
     grid-row: 2;
 }
 
-.content {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
+.centerBox .content {
+    
+    position: relative;
+    height: 30vh;
+    width: 50vw;
     box-shadow: rgba(50, 50, 93, 0.15) 0px 50px 100px -20px, rgba(0, 0, 0, 0.2) 0px 30px 60px -30px, rgba(10, 37, 64, 0.25) 0px -2px 6px 0px inset;
     overflow: auto;
-    grid-column: 2;
-    grid-row: 2;
     padding: 20px;
 }
 
-.content .cardBox {
+.centerBox .content .cardBox {
     position: relative;
     display: grid;
     gap: 25px;
@@ -88,11 +97,11 @@ body {
     justify-items: center;
 }
 
-.content .cardBox.contact {
+.centerBox .content .cardBox.contact {
     margin-top: 50px;
 }
 
-.content .cardBox .card {
+.centerBox .content .cardBox .card {
     position: relative;
     display: flex;
     justify-content: center;
@@ -105,32 +114,26 @@ body {
     transition: 250ms;
 }
 
-.content .cardBox.contact .card {
+.centerBox .content .cardBox.contact .card {
     width: 50px;
     height: 50px;
 }
 
-.content .cardBox .card:hover {
+.centerBox .content .cardBox .card:hover {
     transform: scale(1.1);
 }
 
-.content .cardBox .card:nth-child(2) {
+.centerBox .content .cardBox .card:nth-child(2) {
     background-color: #ffcc00;
 }
-.content .cardBox.contact .card:nth-child(2) {
+.centerBox .content .cardBox.contact .card:nth-child(2) {
     background-color: #111;
 }
-.content .cardBox .card:nth-child(3) {
+.centerBox .content .cardBox .card:nth-child(3) {
     background-color: #ff009b;
 }
 
-.content .cardBox .card.big {
-    width: max-content;
-    height: 150px;
-    grid-column: 1 / span 3;
-}
-
-.content .cardBox .card a {
+.centerBox .content .cardBox .card a {
     color: rgba(255, 255, 255, 0.5);
     font-size: 48px;
     text-decoration: none;
@@ -138,19 +141,19 @@ body {
     cursor: pointer;
 }
 
-.content .cardBox.contact .card a {
+.centerBox .content .cardBox.contact .card a {
     font-size: 5px;
 }
 
-.content .cardBox .card:hover a {
+.centerBox .content .cardBox .card:hover a {
     transform: scale(1.25);
 }
 
-.content .cardBox.contact .card:hover a {
+.centerBox .content .cardBox.contact .card:hover a {
     transform: scale(1);
 }
 
-.content .cardBox .card img {
+.centerBox .content .cardBox .card img {
     position: relative;
     width: 100%;
     height: 100%;
@@ -159,30 +162,30 @@ body {
     transition: 500ms;
 }
 
-.content .cardBox .card img:hover {
+.centerBox .content .cardBox .card img:hover {
     filter: brightness(1.2)
 }
 
-.content .cardBox.contact .card svg {
+.centerBox .content .cardBox.contact .card svg {
     width: 24px;
     height: 24px;
 }
 
-.menuBox {
-    display: flex;
-    justify-content: center;
-    grid-column: 3;
-    grid-row: 2 / span 2;
+.centerBox .menuBox {
+    position: relative;
+    height: 50vh;
+    width: 25vw;
 }
 
-.menuBox .navigation {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
+.centerBox .menuBox .navigation {
+    display: list-item;
+    list-style: none;
+    width: 125px;
+    text-align: center;
+    margin: 11.5vh 0 0 15.5vh;
 }
 
-.menuBox .navigation a {
+.centerBox .menuBox .navigation a {
     color: #111;
     font-weight: 500;
     text-decoration: none;
@@ -191,39 +194,40 @@ body {
     cursor: pointer;
 }
 
-.menuBox .navigation a:hover {
+.centerBox .menuBox .navigation a:hover {
     color: #a55dbd;
 }
 
-.menuBox .navigation a.current {
+.centerBox .menuBox .navigation a.current {
     color: #c15db5;
     text-decoration: underline;
 }
 
-.detailInfo {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.centerBox .detailInfo {
+    position: absolute;
     background-color: rgba(255, 255, 255, 0.1);
     box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
-    padding: 10px 20px;
-    top: 0;
+    padding: 12px 20px;
+    height: 20vh;
+    width: 75vw;
+    top: 60%;
     left: 0;
-    grid-column: 1 / span 2;
-    grid-row: 3;
     transition: 0.5s;
 }
 
-.detailInfo.active {
+.centerBox .detailInfo h2 {
+    position: relative;
+}
+
+.centerBox .detailInfo.active {
     left: calc(-75vw + 10px);
 }
 
-.detailInfo p {
+.centerBox .detailInfo p {
     max-width: 600px;
 }
 
-.detailInfo .closeBtn {
+.centerBox .detailInfo .closeBtn {
     position: absolute;
     display: block;
     background-color: #fff;
@@ -231,29 +235,36 @@ body {
     padding: 10px 5px;
     border: 1px solid #845ec2;
     left: calc(100% - 20px);
+    top: calc(50% - 25px);
     writing-mode: vertical-lr;
     cursor: pointer;
     transition: 500ms;
 }
 
-.detailInfo .closeBtn:hover {
+.centerBox .detailInfo .closeBtn:hover {
     background-color: #a55dbd;
     color: #fff;
 }
 
 .footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    display: block;
+    width: 100vw;
+    height: 25vh;
     padding: 10px 20px;
-    grid-column: 1 / span 3;
-    grid-row: 4;
     background-color: rgba(255, 255, 255, 0.1);
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     z-index: 10;
 }
 
+.footer h3 {
+    margin-top: 9.5vh;
+    width: max-content;
+    margin-right: 50%;
+}
+
 .footer p {
+    margin-left: 70%;
+    margin-top: -90px;
     max-width: 500px;
 }
