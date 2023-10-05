@@ -3,52 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
     <link rel="stylesheet" href="index.css">
-    <title>Lesson 1</title>
 </head>
 <body>
-    <div class="grid-container">
-        <header class="grid-item header">
-            <h2>Mykyta Havrylenko</h2>
-            <h2>Var 4, IP-24</h2>
-        </header>
-        <div class="grid-item textInfo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim atque voluptate fuga quasi esse assumenda dignissimos fugiat ullam eveniet debitis labore animi, explicabo nesciunt. Earum officia nulla quibusdam unde magnam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium repudiandae earum, illo, eaque rerum quidem aliquid deserunt sunt quisquam eveniet accusantium ab, consequatur beatae quis totam! Doloremque saepe quasi assumenda!
-            <ul>
-                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet reprehenderit cumque atque ut eos nostrum commodi odit neque ea magnam, officia dicta facere quaerat ipsam quas sapiente deserunt, voluptatem quisquam.</li>
-                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, eveniet veritatis. Saepe, itaque voluptatum. Hic, voluptatem sapiente, pariatur corrupti dolorem ipsa magnam dolorum minima atque molestias perspiciatis voluptatum, nulla officiis?</li>
-                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam ut voluptate, blanditiis architecto corporis sed provident soluta praesentium, sequi pariatur eius asperiores! Alias cum nostrum eos sapiente error odit sit.</li>
-                <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse mollitia ad nesciunt? Unde eligendi obcaecati maxime doloribus dignissimos corporis provident ipsam ipsum laudantium mollitia illum maiores blanditiis enim, commodi possimus?</li>
-            </ul>
+    <header>
+        <h2>Logo</h2>
+        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
+    </header>
+    <main>
+        <div class="main-img">
+            <img src="image/background-lab4.png">
         </div>
-        <main class="content">
-            <h2>It`s Home</h2>
-            <p>You can move information is menu</p>
-        </main>
-        <div class="grid-item menuBox">
-            <nav class="navigation">
-                <a class="current">Home</a>
-                <a href="index-flex.html">Home(Flex)</a>
-                <a href="indexNotFlexGrid.html">Home(NOT GRID AND FLEX)</a>
-                <a href="about.html">About me</a>
-                <a href="project.html">Project</a>
-                <a href="gallery.html">Gallery</a>
-                <a href="contact.html">Contact</a>
-            </nav>
+        <div class="content">
+            <h1>How is solar panel work?</h1>
+            <p>Simple Text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id suscipit ex. Suspendisse rhoncus laoreet purus quis elementum.</p>
+            <div class="cardBox">
+                <div class="card">
+                    <img src="image/solar-icon-lab4.png">
+                    <h4>Inverter inspection</h4>
+                </div>
+                <div class="card">
+                    <img src="image/ventilator&solar-icon-lab4.png">
+                    <h4>Complete Diagnostics</h4>
+                </div>
+                <div class="card">
+                    <img src="./image/garden-icon-lab4.png">
+                    <h4>Expert Solar Panel Repair</h4>
+                </div>
+                <div class="card">
+                    <img src="./image/ventilator-icon-lab4.png">
+                    <h4>Updates & Monitoring</h4>
+                </div>
+            </div>
         </div>
-        <div class="grid-item detailInfo">
-            <h2>Detail Information</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia assumenda harum hic dolore debitis fugit aliquam praesentium cumque? Omnis unde suscipit repellat amet enim ad voluptatibus iste dicta vero porro!</p>
-            <div class="closeBtn">Info</div>
-        </div>
-        <div class="grid-item footer">
-            <h3>Simple and Fast!</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt atque ea sapiente eligendi similique in quod nesciunt, quidem aspernatur consequatur commodi nemo expedita, distinctio illum. Consequatur earum maxime dignissimos quae.</p>
-        </div>
-    </div>
-    <script>
-        const closeBtn = document.querySelector('.closeBtn');
-        const detailInfo = document.querySelector('.detailInfo');
-        closeBtn.addEventListener('click', () => detailInfo.classList.toggle('active'));
-    </script>
+    </main>
+    <footer>
+        <p>Sample text. Click to select the Text Element</p>
+    </footer>
 </body>
 </html>
