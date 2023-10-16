@@ -10,7 +10,7 @@
     <div class="grid-container">
         <header class="grid-item header">
             <h2>Mykyta Havrylenko</h2>
-            <h2>Var 4, IP-24</h2>
+            <h4 class="header-subtitle">Var 4, IP-24</h4>
         </header>
         <div class="grid-item textInfo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim atque voluptate fuga quasi esse assumenda dignissimos fugiat ullam eveniet debitis labore animi, explicabo nesciunt. Earum officia nulla quibusdam unde magnam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium repudiandae earum, illo, eaque rerum quidem aliquid deserunt sunt quisquam eveniet accusantium ab, consequatur beatae quis totam! Doloremque saepe quasi assumenda!
             <ul>
@@ -23,12 +23,21 @@
         <main class="content">
             <h2>It`s Home</h2>
             <p>You can move information is menu</p>
+            <div class="res"></div>
+            <div class="triangle-box">
+                <h3>Check Triangle</h3>
+                <h4>A:</h4>
+                <input type="number" id="side1">
+                <h4>B:</h4>
+                <input type="number" id="side2">
+                <h4>C:</h4>
+                <input type="number" id="side3">
+                <button>Check triangle</button>
+            </div>
         </main>
         <div class="grid-item menuBox">
             <nav class="navigation">
                 <a class="current">Home</a>
-                <a href="index-flex.html">Home(Flex)</a>
-                <a href="indexNotFlexGrid.html">Home(NOT GRID AND FLEX)</a>
                 <a href="about.html">About me</a>
                 <a href="project.html">Project</a>
                 <a href="gallery.html">Gallery</a>
@@ -42,13 +51,9 @@
         </div>
         <div class="grid-item footer">
             <h3>Simple and Fast!</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt atque ea sapiente eligendi similique in quod nesciunt, quidem aspernatur consequatur commodi nemo expedita, distinctio illum. Consequatur earum maxime dignissimos quae.</p>
+            <p class="footer-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt atque ea sapiente eligendi similique in quod nesciunt, quidem aspernatur consequatur commodi nemo expedita, distinctio illum. Consequatur earum maxime dignissimos quae.</p>
         </div>
     </div>
-    <script>
-        const closeBtn = document.querySelector('.closeBtn');
-        const detailInfo = document.querySelector('.detailInfo');
-        closeBtn.addEventListener('click', () => detailInfo.classList.toggle('active'));
-    </script>
+    <script src="index.js"></script>
 </body>
 </html>
