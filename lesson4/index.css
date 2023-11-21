@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    padding: 20px 200px;
+}
+
+header h2 {
+    color: #b4b2b2;
+}
+
+.main-img {
+    position: relative;
+    width: 100%;
+    height: 40vh;
+}
+
+.main-img img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.content {
+    position: relative;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding: 75px 200px;
+}
+
+.content h1 {
+    font-size: 36px;
+    padding-bottom: 25px;
+    font-weight: 400;
+}
+
+.content p {
+    position: relative;
+    width: 75%;
+    padding-bottom: 75px;
+}
+
+.content .cardBox {
+    position: relative;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    width: 100%;
+    gap: 50px 30px;
+}
+
+.content .cardBox .card {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 200px;
+    height: 150px;
+    border: 3px solid #ff6f00;
+}
+
+.content .cardBox .card img {
+    top: -37.5px;
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    object-fit: cover;
+}
+
+.content .cardBox .card h4 {
+    font-weight: 400;
+    width: 150px;
+}
+
+footer {
+    position: relative;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 20vh;
+    background-color: #444;
+    color: #fff;
+}
+
+footer p {
+    max-width: 75vw;
+}
+
+
+@media (max-width: 991px) {
+    header {
+        padding: 20px 50px;
+    }
+    .content {
+        padding: 75px 50px;
+    }
+    .content h1 {
+        font-size: 32px;
+    }
+}
+
+
+@media (max-width: 500px) {
+    header {
+        padding: 15px 10px;
+    }
+    .content {
+        padding: 25px 5px;
+    }
+    .content .cardBox .card {
+        width: 250px;
+    }
+}

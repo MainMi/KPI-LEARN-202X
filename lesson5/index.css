@@ -1,0 +1,408 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(to right top, #845ec2, #a55dbd, #c15db5, #d95fab, #ec64a0, #f76e91, #fd7b84, #ff8a7a, #ffa26e, #ffbd66, #ffda65, #f9f871);
+    background-repeat: no-repeat;
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    border: 3px solid rgba(255, 255, 255, 0);
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.2);
+}
+    
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.2);
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 25vw 50vw 25vw;
+    grid-template-rows: 25vh 30vh 20vh 25vh;
+    height: 100vh;
+}
+
+.grid-item {
+    box-sizing: border-box;
+}
+
+.sendForm {
+    display: grid;
+    justify-items: center;
+    gap: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.sendForm input {
+    border-radius: 5px;
+}
+
+.sendForm button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: rgba(255,255,255,1);
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px;
+    padding: 10px;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: 250ms;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    padding: 10px 20px;
+    grid-column: 1 / span 3;
+    grid-row: 1;
+    z-index: 20;
+}
+
+
+.header .header-subtitle {
+    width: 50%;
+}
+
+.textInfo {
+    padding: 20px;
+    overflow: auto;
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    box-shadow: rgba(50, 50, 93, 0.15) 0px 50px 100px -20px, rgba(0, 0, 0, 0.2) 0px 30px 60px -30px, rgba(10, 37, 64, 0.25) 0px -2px 6px 0px inset;
+    overflow: auto;
+    grid-column: 2;
+    grid-row: 2;
+    padding: 20px;
+}
+
+.content .cardBox {
+    position: relative;
+    display: grid;
+    gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    width: 100%;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+}
+
+.content .cardBox.contact {
+    margin-top: 50px;
+}
+
+.content .cardBox .card {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #17bbff;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    transition: 250ms;
+}
+
+.content .cardBox.contact .card {
+    width: 50px;
+    height: 50px;
+}
+
+.content .cardBox .card:hover {
+    transform: scale(1.1);
+}
+
+.content .cardBox .card:nth-child(2) {
+    background-color: #ffcc00;
+}
+.content .cardBox.contact .card:nth-child(2) {
+    background-color: #111;
+}
+.content .cardBox .card:nth-child(3) {
+    background-color: #ff009b;
+}
+
+.content .cardBox .card.big {
+    width: max-content;
+    height: 150px;
+    grid-column: 1 / span 3;
+}
+
+.content .cardBox .card a {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 48px;
+    text-decoration: none;
+    transition: 250ms;
+    cursor: pointer;
+}
+
+.content .cardBox.contact .card a {
+    font-size: 5px;
+}
+
+.content .cardBox .card:hover a {
+    transform: scale(1.25);
+}
+
+.content .cardBox.contact .card:hover a {
+    transform: scale(1);
+}
+
+.content .cardBox .card img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: 500ms;
+}
+
+.content .cardBox .card img:hover {
+    filter: brightness(1.2)
+}
+
+.content .cardBox.contact .card svg {
+    width: 24px;
+    height: 24px;
+}
+
+.content .triangle-box {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-items: center;
+    gap: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.content .triangle-box h3 {
+    grid-column: 1 / span 2;
+}
+
+.content .triangle-box input {
+    border-radius: 5px;
+}
+
+.content .triangle-box button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 1 / span 2;
+    border: none;
+    background-color: rgba(255,255,255,1);
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px;
+    padding: 10px;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: 250ms;
+}
+
+.content .triangle-box button:hover {
+    background-color: rgba(255, 102, 0, 1);
+}
+
+.menuBox {
+    display: flex;
+    justify-content: center;
+    grid-column: 3;
+    grid-row: 2 / span 2;
+}
+
+.menuBox .navigation {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.menuBox .navigation a {
+    color: #111;
+    font-weight: 500;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 250ms;
+    cursor: pointer;
+}
+
+.menuBox .navigation a:hover {
+    color: #a55dbd;
+}
+
+.menuBox .navigation a.current {
+    color: #c15db5;
+    text-decoration: underline;
+}
+
+.detailInfo {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
+    padding: 10px 20px;
+    top: 0;
+    left: 0;
+    grid-column: 1 / span 2;
+    grid-row: 3;
+    transition: 0.5s;
+}
+
+.detailInfo.active {
+    left: -95%;
+}
+
+.detailInfo p {
+    max-width: 600px;
+}
+
+.detailInfo .closeBtn {
+    position: absolute;
+    display: block;
+    background-color: #fff;
+    color: #a55dbd;
+    padding: 10px 5px;
+    border: 1px solid #845ec2;
+    left: calc(100% - 20px);
+    writing-mode: vertical-lr;
+    cursor: pointer;
+    transition: 500ms;
+}
+
+.detailInfo .closeBtn:hover {
+    background-color: #a55dbd;
+    color: #fff;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    grid-column: 1 / span 3;
+    grid-row: 4;
+    background-color: rgba(255, 255, 255, 0.1);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    z-index: 10;
+}
+
+.footer p {
+    max-width: 500px;
+}
+
+@media (max-width: 991px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: 33vw 33vw 33vw;
+        grid-template-rows: 25vh 30vh 20vh 25vh;
+        height: 100vh;
+    }
+    .detailInfo p {
+        font-size: 12px;
+        max-width: 300px;
+    }
+    .content .cardBox .card.big {
+        display: none;
+    }
+}
+@media (max-width: 768px) {
+    body {
+        height: 125vh;
+    }
+    .grid-container {
+        display: grid;
+        grid-template-columns: 50vw 50vw;
+        grid-template-rows: 25vh 30vh 20vh 25vh 25vh;
+        height: 125vh;
+    }
+    .textInfo {
+        grid-row: 3;
+    }
+    .content {
+        grid-row: 2;
+        grid-column: 1;
+    }
+    .detailInfo {
+        grid-row: 4;
+    }
+    .detailInfo h2 {
+        font-size: 16px;
+        padding-right: 10px;
+    }
+    .menuBox {
+        grid-row: 2 / span 2;
+        grid-column: 2;
+    }
+    .footer {
+        grid-row: 5;
+    }
+    .footer p {
+        max-width: 200px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 555px) {
+    body {
+        height: 175vh;
+    }
+    .grid-container {
+        display: grid;
+        grid-template-columns: 100vw;
+        grid-template-rows: repeat(auto,25vh);
+    }
+    .textInfo {
+        grid-row: 5;
+    }
+    .content {
+        grid-row: 2;
+        grid-column: 1;
+    }
+    .detailInfo {
+        grid-row: 7;
+    }
+    .menuBox {
+        grid-row: 3 / span 2;
+        grid-column: 1;
+    }
+    .footer {
+        grid-row: 8;
+    }
+}
