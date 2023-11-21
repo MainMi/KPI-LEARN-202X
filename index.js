@@ -62,6 +62,81 @@ checkCookies()
 
 const boxTwo = document.querySelector('.textInfo')
 boxTwo.addEventListener('mouseover', () => {
-    console.log('w')
     boxTwo.style = "font-style: italic!important; "
 })
+
+// les 5
+
+const savedFormsId = [];
+
+const saveToLocalStorage = (value, id) => {
+    const array = localStorage.getItem(`array${id}`)
+    if (!array) {
+        localStorage.setItem(`array${id}`, JSON.stringify([value]))
+        return;
+    }
+    localStorage.setItem(`array${id}`, JSON.stringify([...JSON.parse(array), value]))
+
+}
+
+const createForm = (element) => {
+    const formElement = document.createElement('form');
+    const inputElement = document.createElement('input');
+    const buttonElement = document.createElement('button');
+    buttonElement.innerText = 'Send';
+    buttonElement.type = 'submit';
+    formElement.classList.add('sendForm');
+    formElement.appendChild(inputElement);
+    formElement.appendChild(buttonElement);
+    element.appendChild(formElement);
+    console.log(inputElement.value);
+    formElement.addEventListener('submit', (ev) => {
+        ev.preventDefault()
+        if (!inputElement.value.trim().length) {
+            return;
+        }
+        saveToLocalStorage(inputElement.value, element.getAttribute('id'))
+    })
+}
+
+
+
+const clickHandler = (ev) => {
+    let element = ev.target;
+
+    while (element && !element.classList.contains('grid-item')) {
+        element = element.parentElement;
+    }
+    const id = element.getAttribute('id');
+    console.log(savedFormsId, savedFormsId.includes(id));
+    if (element && !savedFormsId.includes(id)) {
+        savedFormsId.push(id)
+        createForm(element);
+    }
+};
+
+
+const getArray = (element, array) => {
+    const list = document.createElement('ul');
+    element.appendChild(list);
+    array.forEach((value, index) => {
+        const listElement = document.createElement('li')
+        listElement.innerHTML = value;
+        listElement.style.backgroundColor = index % 2 == 0 ? '#111' : '#fff';
+        listElement.style.color= index % 2 !== 0 ? '#111' : '#fff';
+        list.appendChild(listElement);
+    })
+}
+
+const getLocalHostData = () => {
+    const allBlocks = document.querySelectorAll('.grid-item');
+    for (let i = 1; i < 7; i++) {
+        const data = localStorage.getItem(`array${i}`)
+        console.log(data);
+        if (data) {
+            getArray(allBlocks[i - 1], JSON.parse(data))
+        }
+    }
+}
+
+getLocalHostData()

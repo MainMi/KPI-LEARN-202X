@@ -43,6 +43,33 @@ body {
     box-sizing: border-box;
 }
 
+.sendForm {
+    display: grid;
+    justify-items: center;
+    gap: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.sendForm input {
+    border-radius: 5px;
+}
+
+.sendForm button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: rgba(255,255,255,1);
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px;
+    padding: 10px;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: 250ms;
+}
+
 .header {
     display: flex;
     align-items: center;

@@ -8,23 +8,23 @@
 </head>
 <body>
     <div class="grid-container">
-        <header class="grid-item header">
-            <h2>Mykyta Havrylenko</h2>
-            <h4 class="header-subtitle">Var 4, IP-24</h4>
+        <header class="grid-item header" id="1">
+            <h2 onclick="{clickHandler(event)}">Mykyta Havrylenko</h2>
+            <h4 onclick="{clickHandler(event)}" class="header-subtitle" onclick="{clickHandler(event)}">Var 4, IP-24</h4>
         </header>
-        <div class="grid-item textInfo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim atque voluptate fuga quasi esse assumenda dignissimos fugiat ullam eveniet debitis labore animi, explicabo nesciunt. Earum officia nulla quibusdam unde magnam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium repudiandae earum, illo, eaque rerum quidem aliquid deserunt sunt quisquam eveniet accusantium ab, consequatur beatae quis totam! Doloremque saepe quasi assumenda!
-            <ul>
+        <div class="grid-item textInfo" id="2" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim atque voluptate fuga quasi esse assumenda dignissimos fugiat ullam eveniet debitis labore animi, explicabo nesciunt. Earum officia nulla quibusdam unde magnam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium repudiandae earum, illo, eaque rerum quidem aliquid deserunt sunt quisquam eveniet accusantium ab, consequatur beatae quis totam! Doloremque saepe quasi assumenda!
+            <ul onclick="{clickHandler(event)}">
                 <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet reprehenderit cumque atque ut eos nostrum commodi odit neque ea magnam, officia dicta facere quaerat ipsam quas sapiente deserunt, voluptatem quisquam.</li>
                 <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, eveniet veritatis. Saepe, itaque voluptatum. Hic, voluptatem sapiente, pariatur corrupti dolorem ipsa magnam dolorum minima atque molestias perspiciatis voluptatum, nulla officiis?</li>
                 <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam ut voluptate, blanditiis architecto corporis sed provident soluta praesentium, sequi pariatur eius asperiores! Alias cum nostrum eos sapiente error odit sit.</li>
                 <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse mollitia ad nesciunt? Unde eligendi obcaecati maxime doloribus dignissimos corporis provident ipsam ipsum laudantium mollitia illum maiores blanditiis enim, commodi possimus?</li>
             </ul>
         </div>
-        <main class="content">
-            <h2>It`s Home</h2>
-            <p>You can move information is menu</p>
+        <main class="grid-item content" id="3">
+            <h2 onclick="{clickHandler(event)}">It`s Home</h2>
+            <p onclick="{clickHandler(event)}">You can move information is menu</p>
             <div class="res"></div>
-            <div class="triangle-box">
+            <div class="triangle-box" onclick="{clickHandler(event)}">
                 <h3>Check Triangle</h3>
                 <h4>A:</h4>
                 <input type="number" id="side1">
@@ -35,23 +35,23 @@
                 <button>Check triangle</button>
             </div>
         </main>
-        <div class="grid-item menuBox">
-            <nav class="navigation">
-                <a class="current">Home</a>
-                <a href="about.html">About me</a>
-                <a href="project.html">Project</a>
-                <a href="gallery.html">Gallery</a>
-                <a href="contact.html">Contact</a>
+        <div class="grid-item menuBox" id="4">
+            <nav class="navigation" onclick="{clickHandler(event)}">
+                <a class="current" >Home</a>
+                <a >About me</a>
+                <a>Project</a>
+                <a>Gallery</a>
+                <a>Contact</a>
             </nav>
         </div>
-        <div class="grid-item detailInfo">
-            <h2>Detail Information</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia assumenda harum hic dolore debitis fugit aliquam praesentium cumque? Omnis unde suscipit repellat amet enim ad voluptatibus iste dicta vero porro!</p>
-            <div class="closeBtn">Info</div>
+        <div class="grid-item detailInfo" id="5">
+            <h2 onclick="{clickHandler(event)}">Detail Information</h2>
+            <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia assumenda harum hic dolore debitis fugit aliquam praesentium cumque? Omnis unde suscipit repellat amet enim ad voluptatibus iste dicta vero porro!</p>
+            <div class="closeBtn" onclick="{clickHandler(event)}">Info</div>
         </div>
-        <div class="grid-item footer">
-            <h3>Simple and Fast!</h3>
-            <p class="footer-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt atque ea sapiente eligendi similique in quod nesciunt, quidem aspernatur consequatur commodi nemo expedita, distinctio illum. Consequatur earum maxime dignissimos quae.</p>
+        <div class="grid-item footer" id="6">
+            <h3 onclick="{clickHandler(event)}">Simple and Fast!</h3>
+            <p class="footer-description" onclick="{clickHandler(event)}">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt atque ea sapiente eligendi similique in quod nesciunt, quidem aspernatur consequatur commodi nemo expedita, distinctio illum. Consequatur earum maxime dignissimos quae.</p>
         </div>
     </div>
     <script src="index.js"></script>
